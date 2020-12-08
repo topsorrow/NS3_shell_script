@@ -84,5 +84,6 @@ loss_select_2=`awk -F " " '{print $1}' /root/loss.dat|sed -n "$myloss_random_2 p
 echo -e $loss_select_2
 
 #final
-temp=`CXXFLAGS="-Wall" ./waf --run "scratch/Standard_NC_EDPF_v1.0 --DataRate1=$bw_select  --DataRate2=$bw_select_1 --DataRate3=$bw_select_2 --Delay1=$delay_select  --Delay2=$delay_select_1 --Delay3=$delay_select_2 --Loss1=$loss_select  --Loss2=$loss_select_1 --Loss3=$loss_select_2"`
-echo -e $temp
+#temp=`CXXFLAGS="-Wall" ./waf --run "scratch/Standard_NC_EDPF_v1.0 --DataRate1=$bw_select  --DataRate2=$bw_select_1 --DataRate3=$bw_select_2 --Delay1=$delay_select  --Delay2=$delay_select_1 --Delay3=$delay_select_2 --Loss1=$loss_select  --Loss2=$loss_select_1 --Loss3=$loss_select_2"`
+echo -e $bw_select $bw_select_1 $bw_select_2 $delay_select $delay_select_1 $delay_select_2 $loss_select $loss_select_1 $loss_select_2 >> /root/data.dat
+#echo -e $temp
